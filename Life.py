@@ -33,10 +33,7 @@ class Life:
             return 0
 
     def next_state(self):
-        tmp = [[0 for _ in range(self.size_x)] for __ in range(self.size_y)]
-        for y in range(len(self.state)):
-            for x in range(len(self.state[y])):
-                tmp[y][x] = self.judge_one_cell(x, y)
+        tmp = [[self.judge_one_cell(x, y) for x in range(self.size_x)] for y in range(self.size_y)]
         self.state = tmp
 
     def print(self, alive='█', died=' '):

@@ -7,6 +7,6 @@ if __name__ == "__main__":
 
     while True:
         print("\033c")
+        life.print_state()
         life.next_state()
-        life.print()
         sleep(0.1)

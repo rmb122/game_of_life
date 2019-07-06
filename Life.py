@@ -36,6 +36,13 @@ class Life:
         tmp = [[self.judge_one_cell(x, y) for x in range(self.size_x)] for y in range(self.size_y)]
         self.state = tmp
 
+    def add_noise(self, probability=1):
+        assert 10000 > probability > 0
+
+        for y in range(len(self.state)):
+            for x in range(len(self.state[y])):
+                self.state[y][x] |= (lambda: 1 if randint(0, 10000) <= probability else 0)()
+
     def print_state(self, alive='██', died='  '):
         for y in range(len(self.state)):
             for x in range(len(self.state[y])):

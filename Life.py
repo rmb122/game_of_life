@@ -36,7 +36,7 @@ class Life:
         tmp = [[self.judge_one_cell(x, y) for x in range(self.size_x)] for y in range(self.size_y)]
         self.state = tmp
 
-    def print_state(self, alive='█', died=' '):
+    def print_state(self, alive='██', died='  '):
         for y in range(len(self.state)):
             for x in range(len(self.state[y])):
                 if self.state[y][x]:

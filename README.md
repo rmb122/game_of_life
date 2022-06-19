@@ -1,7 +1,11 @@
-# 生命游戏
+# Game of Life
 
-10 分钟写的简单 python 实现  
-当屏保挺不错的 233  
+## Usage
+
+press `q` to quit  
+`x` for faster evolution speed  
+`z` for slower evolution speed  
+`m` to switch mutation
 
 <hr>
 

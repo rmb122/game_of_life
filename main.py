@@ -10,12 +10,13 @@ from life import Life, LifeStatus
 COLOR_PAIR_WHILE = 1
 COLOR_PAIR_BLACK = 2
 BLANK = '  '
-SLEEP_TIME = 0
+SLEEP_TIME = 0.1
 MUTATION = True
 
 
 class ControlKeys(enum.Enum):
     QUIT_KEY = ord('q')
+    RESTART_KEY = ord('r')
     FASTER_KEY = ord('x')
     SLOWER_KEY = ord('z')
     MUTATION_SWITCH = ord('m')
@@ -73,7 +74,7 @@ if __name__ == "__main__":
 
         key = stdscr.getch()
         match key:
-            case curses.KEY_RESIZE:
+            case curses.KEY_RESIZE | ControlKeys.RESTART_KEY.value:
                 life = init_window(window)
                 window.clear()
             case ControlKeys.FASTER_KEY.value:
@@ -85,3 +86,4 @@ if __name__ == "__main__":
                 sys.exit(0)
             case ControlKeys.MUTATION_SWITCH.value:
                 MUTATION = not MUTATION
+

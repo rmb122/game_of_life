@@ -3,9 +3,10 @@
 ## Usage
 
 press `q` to quit  
+`r` for regenerate  
 `x` for faster evolution speed  
 `z` for slower evolution speed  
-`m` to switch mutation
+`m` to switch mutation, default is on
 
 <hr>
 

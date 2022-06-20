@@ -1,5 +1,7 @@
 # Game of Life
 
+![](./demo.gif)
+
 ## Usage
 
 press `q` to quit  
